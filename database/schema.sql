@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS `kschedule`;
+CREATE DATABASE `kschedule`;

@@ -1,0 +1,54 @@
+.schedule-body{
+    height: 100%
+}
+
+.date-text {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+}
+
+.clock {
+    padding: 10px;
+    font-size: 2.5em;
+}
+
+.show>a {
+    font-size: 4em;
+    text-decoration: none;
+    color: #333 !important;
+}
+
+#description-span {
+    font-weight: normal !important;
+}
+
+.lineup {
+    padding: 10px;
+    font-size: 2.5em;
+}
+
+.countdown {
+    padding: 10px;
+    font-size: 2.5em;
+}
+
+.extraClass {
+    font-family: lato;
+    font-size: 14px !important;
+    pointer-events: auto !important;
+    font-weight: lighter !important;
+    font-style: normal !important;
+    width: 300px !important;
+}
+
+.extraClass:hover {
+    visibility: visible !important;
+    opacity: 1 !important;
+
+}

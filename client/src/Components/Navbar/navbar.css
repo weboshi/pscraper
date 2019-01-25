@@ -1,0 +1,123 @@
+.navbar-default {
+    background-color: rgb(249, 252, 255) !important;
+    margin-bottom: 0;
+    border: 0 !important;
+
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 50px;
+}
+
+.a-hover {
+    height: auto !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.a-hover:hover, .a-hover:focus {
+    border-bottom: 3px solid rgb(252, 97, 136)
+}
+
+
+.a-hover:hover, .a-hover:focus {
+    -webkit-transition: color .2;
+    -moz-transition:    color .2;
+    -ms-transition:     color .2;
+    -o-transition:      color .2;
+    transition: all .15s ease;
+}
+
+
+
+.dropdown-menu {
+    background-color: white !important;
+    color: rgb(252, 97, 136) !important;
+}
+
+.dropdown-menu>li {
+    text-align: center !important;
+}
+
+
+.dropdown-menu li>a {
+    color: rgb(252, 97, 136) !important;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    -webkit-transition: color .2;
+    -moz-transition:    color .2;
+    -ms-transition:     color .2;
+    -o-transition:      color .2;
+    transition: all .15s cubic-bezier(.455,.03,.515,.955)
+}
+
+.dropdown-menu li>a>div {
+    float: left;
+    width: 30px;
+    text-align: center;
+    margin-right: 25px;
+}
+
+
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    background-color: white !important;
+    color: rgb(252, 97, 136) !important;
+    border-left: 3px solid rgb(252, 97, 136)
+}
+
+.navbar-default .navbar-brand {
+    color: rgb(252, 97, 136) !important;
+    font-family: 'Fredoka One', cursive;
+    background-color: white;
+    font-size: 24px !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: rgb(252, 97, 136) !important;
+    font-weight: bold !important;
+}
+
+.navbar-brand .fas {
+    color: rgb(252, 97, 136) !important;
+}
+
+
+.navbar-default .navbar-text {
+    color: white !important;
+}
+
+.navbar-default .navbar-link {
+    color: #7dffc0 !important;
+}
+
+.navbar-default #basic-nav-dropdown {
+    background-color: transparent
+}
+
+
+.navbar {
+    width: 100%;
+    margin-bottom: 0;
+    border: 0;
+    min-height: 50px;
+}
+
+.navbar-brand {
+    height: 50px;
+    line-height: 50px;
+}
+
+.navbar-nav {
+    height: 50px !important;
+    line-height: 50px !important
+}
+
+.container {
+    width: auto !important;
+}

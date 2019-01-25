@@ -1,0 +1,53 @@
+
+
+.info-body {
+    text-align: center;
+}
+
+.gm-style-iw {
+    top: 0 !important;
+}
+
+.title-a {
+    color: white;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+.title-a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.info-label {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #48b5e9;
+    color: white;
+
+    margin-bottom: 0;
+    border-radius: 5px 2px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.info-body {
+    padding-top: 10px;
+    background-color: white;
+    font-size: 13px;
+	line-height: 18px;
+	font-weight: bold;
+	max-height: 140px;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+}
+
+.info-content { 
+    min-width: 200px;
+    border: 1px solid rgba(72, 181, 233, 0.6);
+	border-radius: 3px
+}
+

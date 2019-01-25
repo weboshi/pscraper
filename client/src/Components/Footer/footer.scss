@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.social-footer {
+
+    text-align: center;
+
+
+}
+
+.social-footer>a{
+    color: #fc6188 !important;
+    font-size: 2em;
+}
+
+.logo-footer>a{
+    font-size: 2em;
+    color: #fc6188;
+}
+
+.links-footer {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+
+}
+
+.copyright-footer {
+    width: 100%;
+
+}
+
+.foot {
+    background-color: rgb(249, 252, 255);
+    color: rgb(252, 97, 136);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
