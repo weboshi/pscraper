@@ -382,6 +382,7 @@ export class Schedule extends Component {
                         time: "CURRENTLY AIRING",
                         active: 0,
                         lineup: lineup,
+                        description: description
                     }, () => this.secondsToTime())
                 }
                 else {
@@ -456,6 +457,7 @@ export class Schedule extends Component {
                         time: "CURRENTLY AIRING",
                         active: 0,
                         lineup: lineup,
+                        description: description
                     }, () => this.secondsToTime())
                 }
                 else {
@@ -528,6 +530,7 @@ export class Schedule extends Component {
                         time: "CURRENTLY AIRING",
                         active: 0,
                         lineup: lineup,
+                        description: description
                     }, () => this.secondsToTime())
                 }
                 else {
@@ -605,6 +608,9 @@ export class Schedule extends Component {
                 s: seconds,
             });
     
+        }
+        else {
+            window.location.reload();
         }
       }
 
