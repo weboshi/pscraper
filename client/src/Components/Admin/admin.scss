@@ -1,4 +1,18 @@
 .form-panel {
-    width: 500px;
-    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.panel-primary {
+    width: 400px;
+    margin: 20px;
+}
+
+.updated {
+    font-weight: bold;
+    margin-right: 10px;
+    color: white;
 }

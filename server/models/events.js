@@ -30,10 +30,10 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       lineup: {
-        type: DataTypes.STRING(150),
+        type: DataTypes.STRING(500),
         allowNull: true,
         validate: {
-          len: [0, 150]
+          len: [0, 500]
         }
       },
       day: {

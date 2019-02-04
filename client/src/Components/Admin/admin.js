@@ -14,6 +14,7 @@ export class AdminPanel extends Component {
             value: '',
             editEvent: false,
             thisEvent: '',
+            updateSuccess: '',
         }
         this.handleInputChange = this.handleInputChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -58,7 +59,7 @@ export class AdminPanel extends Component {
         });
       }
 
-      editEvent(clickedEvent, eventId, eventName, eventDescription, eventTime, eventInactive, eventLineup) {
+      editEvent(clickedEvent, eventId, eventName, eventDescription, eventTime, eventInactive, eventLineup, eventEndtime) {
  
         this.setState({
             editEvent: !this.state.editEvent, 
@@ -68,19 +69,23 @@ export class AdminPanel extends Component {
             description: eventDescription,
             lineup: eventLineup,
             time: eventTime,
-            inactive: eventInactive
+            inactive: eventInactive,
+            endtime: eventEndtime
             
         })
     }
 
     cancelEdit() {
         this.setState({
-            editEvent: !this.state.editEvent, thisEvent: '', id: ''
+            editEvent: !this.state.editEvent, 
+            thisEvent: '', 
+            id: ''
         })
     }
 
     updateEvent() {
-        console.log(this.state.description)
+        console.log(typeof(this.state.inactive))
+        console.log(this.state)
         axios({
             method: 'put',
             url: '/api/event/update',
@@ -90,14 +95,17 @@ export class AdminPanel extends Component {
                 time: this.state.time,
                 lineup: this.state.lineup,
                 inactive: this.state.inactive,
-                id: this.state.id
+                id: this.state.id,
+                endtime: this.state.endtime
             },
         }).then(res => {
             console.log(res)
            
             if(res.status == 200){
-                console.log("Pin Updated")
-                window.location.reload(true)
+                this.setState({
+                    editEvent: false,
+                    updateSuccess: this.state.thisEvent
+                })
             }
         }).catch(function(error){
                 console.log(error) 
@@ -108,9 +116,9 @@ export class AdminPanel extends Component {
         const events = this.state.events[0]
         return(
                 events.map((event, i) => (
-                <div key={i}>  
+                <div style={{width:"auto"}} key={i}>  
                 {this.state.editEvent && this.state.thisEvent === i ? 
-                <Panel key={i} style={{backgroundColor:'rgb(35, 219, 133) !important'}}>
+                <Panel key={i} style={{backgroundColor:'rgb(135, 206, 235) !important'}}>
                     <Panel.Heading>
                         <div 
                         style={{
@@ -144,6 +152,15 @@ export class AdminPanel extends Component {
                     </Panel.Body>  
                     <Panel.Body>      
                         <FormControl
+                        name="time"
+                        type="text"
+                        value={this.state.endtime}
+                        placeholder={event.endtime}
+                        onChange={this.handleInputChange}
+                        />
+                    </Panel.Body> 
+                    <Panel.Body>      
+                        <FormControl
                         name="lineup"
                         type="text"
                         value={this.state.lineup}
@@ -160,7 +177,10 @@ export class AdminPanel extends Component {
                         onChange={this.handleInputChange}
                         />
                     </Panel.Body>
-                    <FormControl style={{paddingLeft:'15px !important',paddingRight:'15px !important'}} componentClass="select" placeholder={event.inactive} name='category' onChange={this.handleChange}>
+                    <FormControl style={{paddingLeft:'15px !important',paddingRight:'15px !important'}} 
+                    componentClass="select" 
+                    placeholder={event.inactive.toString()} 
+                    name='category' onChange={this.handleChange}>
                         <option value="0">Yes</option>
                         <option value="1">No</option>
                
@@ -175,9 +195,12 @@ export class AdminPanel extends Component {
                     display:'flex', 
                     justifyContent:'space-between',
                     alignItems:'center'}}>
-                    <span style={{fontWeight:'bold'}}>Title: {event.name}</span> <div><Button onClick={() => this.editEvent(i, event.id, event.name, event.description, event.time, event.inactive, event.lineup)}>Edit</Button></div></div>
+                    <span style={{fontWeight:'bold'}}>Title: {event.name}</span> <div>{this.state.updateSuccess === i && <span className="updated">Updated! <i style={{color:"rgb(0, 255, 42)"}} 
+                    class="fas fa-check"></i></span>}
+                    <Button onClick={() => this.editEvent(i, event.id, event.name, event.description, event.time, event.inactive, event.lineup, event.endtime)}>Edit</Button></div></div>
             </Panel.Heading>
-                <Panel.Body>Time: {event.time}</Panel.Body>
+                <Panel.Body>Start Time: {event.time}</Panel.Body>
+                <Panel.Body>End Time: {event.endtime}</Panel.Body>
                 <Panel.Body>Lineup: {event.lineup}</Panel.Body>
                 <Panel.Body>Description: {event.description}</Panel.Body>
                 <Panel.Body>Day: {event.day}</Panel.Body>

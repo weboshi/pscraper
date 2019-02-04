@@ -21,9 +21,9 @@ const controller = {
   update: function(req, res) {
     db.Event.update({
         name: req.body.name,
+        inactive: req.body.inactive,
         lineup: req.body.lineup,
         time: req.body.time,
-        inactive: req.body.inactive,
         description: req.body.description,
         endtime: req.body.endtime
 

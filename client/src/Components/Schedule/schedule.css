@@ -8,18 +8,19 @@
     font-style: italic;
     font-weight: bold;
     display: flex;
-    flex-flow: column;
     height: 100%;
+    justify-content: center;
+    flex-direction: column;
 
 }
 
 .clock {
     padding: 10px;
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 
 .show>a {
-    font-size: 4em;
+    font-size: 3.5em;
     text-decoration: none;
     color: #333 !important;
 }
@@ -30,12 +31,17 @@
 
 .lineup {
     padding: 10px;
-    font-size: 2.5em;
+    font-size: 1.7em;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .countdown {
     padding: 10px;
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 
 .extraClass {
