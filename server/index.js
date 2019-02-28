@@ -15,6 +15,7 @@ export default path => {
   app.use("/api/event", routers.event);
   app.use("/api/pin", routers.pin);
   app.use("/api/user", routers.user);
+  app.use("/api/organization", routers.organization);
 
   // Any non API GET routes will be directed to our React App and handled by React Router
   app.get("*", (req, res) => {

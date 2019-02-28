@@ -105,7 +105,7 @@ export class AdminPanel extends Component {
                 this.setState({
                     editEvent: false,
                     updateSuccess: this.state.thisEvent
-                })
+                }, () => this.getEventInfo())
             }
         }).catch(function(error){
                 console.log(error) 

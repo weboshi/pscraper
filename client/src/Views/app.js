@@ -17,10 +17,7 @@ export default props =>
 <BrowserRouter>
   <div className="app">
     <div className="app-main">
-    <Route path="/seulrene" component={Admin}/>
     <Route exact path="/" component={Home}/>
-
     </div>
-    <Footer/>
   </div>
 </BrowserRouter>

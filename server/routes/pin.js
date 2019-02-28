@@ -1,5 +1,7 @@
 import express from "express";
 import pin from "../controllers/pinsController"
+import puppeteer from 'puppeteer';
+
 
 const router = express.Router();
 

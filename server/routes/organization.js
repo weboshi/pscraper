@@ -9,6 +9,7 @@ router.get("/:id", org.findById);
 router.post("/", org.create);
 router.put("/:id", org.update);
 router.delete("/:id", org.remove);
+router.post("/scrape/", org.scrapeSite);
 
 // Export routes for server.js to use.
 export default router;
